@@ -1,8 +1,32 @@
 {
-  "name": "ts-ArcOS",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/TWI-ArcOS/ts-ArcOS.git",
-  "author": "TechWorldInc <76709090+TechWorldInc@users.noreply.github.com>",
-  "license": "MIT"
+  "name": "arcos-ts",
+  "version": "3.0.0",
+  "description": "The super advanced electron OSE. Rewritten in TS.",
+  "main": "main.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "start": "npm run build && electron ./dist/main.js",
+    "dev": "webpack-dev-server & (npm run build && APP_DEV=true electron ./dist/main.js)"
+  },
+  "author": "TechWorldInc @ TWI-ArcOS",
+  "devDependencies": {
+    "css-loader": "^3.5.3",
+    "electron": "^17.0.1",
+    "file-loader": "^6.0.0",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-loader": "^0.6.0",
+    "prettier": "^2.0.5",
+    "style-loader": "^1.2.1",
+    "ts-loader": "^7.0.4",
+    "typescript": "^3.9.3",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@electron/remote": "^2.0.5"
+  }
 }
